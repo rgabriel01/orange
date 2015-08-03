@@ -9,9 +9,8 @@ class BudgeteerController < ApplicationController
   end
 
   def get_budgets
-    budgets  = Budgeteer.all
-    presenter = Budgeteer::Presenter.new(budgets).render
-    render json: presenter
+    budgets  = Budgeteer.order('created_at desc').all
+    render json: Budgeteer::Presenter.new(budgets).render
   end
 
 end

@@ -1,0 +1,5 @@
+// mixins
+@mixin transition($transition-prop){
+  transition: $transition-prop;
+  -webkit-transition: $transition-prop);
+}

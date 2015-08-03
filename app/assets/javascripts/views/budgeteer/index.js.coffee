@@ -18,7 +18,6 @@ class App.Views.BudgeteerIndex extends Backbone.View
     @SetupBudgetFormValidator()
 
   renderBudgetTable: (budgetItem) ->
-    debugger
     $('.budgeteer-table').append(new App.Views.BudgeteerRow(model: budgetItem).render())
 
   getBudget: ->
@@ -30,7 +29,6 @@ class App.Views.BudgeteerIndex extends Backbone.View
 
 
   saveBudget: (event) ->
-    debugger
     budget = new App.Models.Budget()
     raw = $('#budgeteer-form').serializeArray()
     data = {}
@@ -40,6 +38,6 @@ class App.Views.BudgeteerIndex extends Backbone.View
 
     budget.save data,
       success: (model , response) ->
-        debugger
+        # todo add handler 
       error: (model , response)->
-        debugger
+        # todo add handler

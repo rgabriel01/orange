@@ -1,6 +1,5 @@
 class Budgeteer
   class Presenter
-
     #exposed fields
     FIELDS = %w(description amount created_at)
 
@@ -12,7 +11,11 @@ class Budgeteer
       @raw.map{|item|
         parsed_value = {}
           FIELDS.each{|field|
-            parsed_value[field] = item[field]
+            if field == 'created_at'
+              parsed_value[field] = item[field].try(:strftime, '%m/%d/%Y') if item[field].present?
+            else
+              parsed_value[field] = item[field]
+            end
           }
         parsed_value
       }

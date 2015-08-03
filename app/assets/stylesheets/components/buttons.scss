@@ -1,0 +1,21 @@
+@import 'base/common';
+
+button , .button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+  color: #ffffff;
+  cursor: pointer;
+  @include transition(hover 0.3s ease 0s);
+
+  &.green{
+    background-color: #2ecc71;
+    border: 1px solid #27ae60;
+  }
+  &.red{
+    background-color: #d91e18;
+    border: 1px solid #cf000f;
+  }
+}
+
