@@ -7,7 +7,12 @@ button , .button {
   border: 1px solid #2980b9;
   color: #ffffff;
   cursor: pointer;
-  @include transition(hover 0.3s ease 0s);
+  @include transition(opacity 0.3s ease 0s);
+
+  &:hover{
+    opacity: .9;
+  }
+
 
   &.green{
     background-color: #2ecc71;

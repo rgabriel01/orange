@@ -1,0 +1,26 @@
+
+table{
+  &.list{
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 1px;
+    background-color: #22313f;
+  }
+  thead{
+    tr{
+      background: #1e8bc3;
+      color: #ffffff;
+      th{
+        font-weight: 400;
+      }
+    }
+  }
+  tbody{
+    tr:nth-child(even){
+      background: #22a7f0 ;
+    }
+    tr:nth-child(odd){
+      background: #ffffff;
+    }
+  }
+}
