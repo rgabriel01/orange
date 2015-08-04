@@ -1,5 +1,9 @@
 // this resets some html props to default
 
+html, body{
+  height: 100%;
+}
+
 * {
   outline: 0;
   padding: 0;

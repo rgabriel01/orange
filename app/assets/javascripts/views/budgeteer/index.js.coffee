@@ -24,11 +24,18 @@ class App.Views.BudgeteerIndex extends Backbone.View
     @budgets.fetch()
 
   SetupBudgetFormValidator: ->
-    @$('#budgeteer-form').validate 
-      submitHandler: ->
+    @$('#budgeteer-form').validate
+      errorPlacement: (event, element) ->
+        return
+      rules:
+        description:
+          required: true
+        amount:
+          required: true
 
 
   saveBudget: (event) ->
+    return unless $('#budgeteer-form').valid()
     budget = new App.Models.Budget()
     raw = $('#budgeteer-form').serializeArray()
     data = {}

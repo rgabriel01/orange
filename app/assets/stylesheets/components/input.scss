@@ -1,0 +1,9 @@
+@import 'base/common';
+
+input {
+  border: none;
+  border-bottom: 1px solid #2ecc71;
+  &.error{
+    border-color: $red;
+  }
+}

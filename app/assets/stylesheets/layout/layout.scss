@@ -1,0 +1,12 @@
+@import 'base/common';
+
+.app-header, .app-footer{
+  height: 50px;
+  background-color: #4183d7;
+}
+
+.app-body{
+  margin: 20px;
+  min-height: 100%;
+  margin-bottom: -50px;
+}
