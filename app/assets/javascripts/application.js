@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ./vendor/jquery.validate
+//= require jquery-ui
+//= require_tree ./vendor
 //= require underscore
 //= require backbone
 //= require orange-backbone

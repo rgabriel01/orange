@@ -13,6 +13,14 @@ Orange::Application.routes.draw do
 
   get 'budgeteer/budgets' => 'budgeteer#get_budgets'
   resources :budgeteer
+
+  # get 'todo/todos' => 'todo#get_todos'
+  resources :todo do
+    collection do
+      get  'todos' => 'todo#get_todos'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,14 @@
+@import 'base/common';
+
+.todo-modal { 
+  height: 55px;
+  width: 500px;
+
+  #todo-form { 
+    display: inline-block;
+  }
+
+  .buttons { 
+    display: inline-block;
+  }
+}
